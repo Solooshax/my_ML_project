@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Face Register</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6fb;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+width:400px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+video{
+width:320px;
+height:240px;
+background:black;
+border-radius:10px;
+margin-top:10px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+border:none;
+background:#ff4f8b;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff2f6e;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Face Registration</h2>
+
+<input type="email" id="email" placeholder="Enter Email">
+<input type="password" id="password" placeholder="Enter Password">
+
+<video id="video" autoplay></video>
+
+<br>
+
+<button onclick="toggleCamera()" id="cameraBtn">Camera ON</button>
+
+<button onclick="registerFace()">Register</button>
+
+<p id="status"></p>
+
+</div>
+
+<script>
+
+let video = document.getElementById("video")
+let stream = null
+
+function toggleCamera(){
+
+let status=document.getElementById("status")
+
+if(stream){
+
+stream.getTracks().forEach(track=>track.stop())
+video.srcObject=null
+stream=null
+document.getElementById("cameraBtn").innerText="Camera ON"
+status.innerText=""
+
+}else{
+
+navigator.mediaDevices.getUserMedia({video:true})
+.then(s=>{
+stream=s
+video.srcObject=stream
+document.getElementById("cameraBtn").innerText="Camera OFF"
+})
+
+}
+
+}
+
+function registerFace(){
+
+let status=document.getElementById("status")
+
+status.innerText="Analyzing face..."
+
+let canvas=document.createElement("canvas")
+canvas.width=video.videoWidth
+canvas.height=video.videoHeight
+
+let ctx=canvas.getContext("2d")
+ctx.drawImage(video,0,0)
+
+status.innerText="Scanning face..."
+
+let image=canvas.toDataURL("image/jpeg")
+
+let email=document.getElementById("email").value
+let password=document.getElementById("password").value
+
+fetch("/register-face",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+email:email,
+password:password,
+image:image
+})
+
+})
+
+.then(res=>res.json())
+.then(data=>{
+
+status.innerText=data.message
+
+if(data.success){
+
+setTimeout(()=>{
+window.location.href="/login"
+},1500)
+
+}
+
+})
+
+}
+
+</script>
+
+</body>
+</html>

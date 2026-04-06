@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Models
+*.h5
+*.pkl
+
+# Audio files
+*.wav
+*.mp3
+
+# Dataset folders
+backend/**/dataset/
+backend/**/datasets/
+backend/**/region_dataset/
+backend/**/genres_original/
+
+# Uploads
+backend/uploads/
+
+# VS Code
+.vscode/
+
+# Environment
+venv/
+.env
