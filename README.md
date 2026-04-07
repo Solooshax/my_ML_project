@@ -40,19 +40,31 @@ Download this folder: 👉 **AI_Music_Data**
 (Google Drive link) : https://drive.google.com/drive/folders/1py-dO5N0zHSck1JQBOrwlveQyjyjYQTR?usp=sharing
 
 
-# 📂 AI_Music_Data Structure
+# After downloading the zip file (📂 AI_Music_Data )  you will see Folder Structure something like this:
 
 AI_Music_Data/
-│
-├── backend_uploads/
-├── emotion_detection_dataset/
-├── voice_emotion_detection_dataset/
-├── regional_detection_dataset/
-├── song_database/
-├── models/
+  🔹backend_uploads/
+  🔹emotion_detection_dataset/
+  🔹voice_emotion_detection_dataset/
+  🔹regional_detection_dataset/
+  🔹plagiarism_detection_database/
+  🔹models/
 
 
-# ⚙️ SETUP (VERY IMPORTANT 🔥)
+# ⚙️ SETUP (VERY IMPORTANT)
+
+**Step 1: Clone the Repository**
+Open terminal / command prompt and run:
+
+git clone https://github.com/Solooshax/my_ML_project
+   
+cd my_ML_project
+
+**Step 2: Install Required Libraries**
+Make sure Python is installed, then run:
+
+pip install -r requirements.txt
+
 
 ## 🔹 1. Place MODELS into PROJECT (REQUIRED ✅)
 
