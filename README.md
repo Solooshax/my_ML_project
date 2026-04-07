@@ -2,6 +2,7 @@
 
 An intelligent AI-based system that analyzes music using multiple features like emotion detection, genre classification, regional detection, plagiarism detection, and recommendation.
 
+
 # 🚀 Features
 
 * 🔐 Face Recognition Login & Registration   (secure login)
@@ -14,10 +15,12 @@ An intelligent AI-based system that analyzes music using multiple features like 
 * 🎧 Music Recommendation System             (Recommends music based on emotion)
 
 
+
 # 📥 Download Required Data
 
 Download this folder: 👉 **AI_Music_Data**
 (Google Drive link) : https://drive.google.com/drive/folders/1py-dO5N0zHSck1JQBOrwlveQyjyjYQTR?usp=sharing
+
 
 
 # After downloading the zip file (📂 AI_Music_Data )  you will see Folder Structure something like this:
@@ -31,6 +34,7 @@ AI_Music_Data/
   🔹models/
 
 
+
 # ⚙️ SETUP (VERY IMPORTANT)
 
 **Step 1: Clone the Repository**
@@ -40,10 +44,12 @@ git clone https://github.com/Solooshax/my_ML_project
    
 cd my_ML_project
 
+
 **Step 2: Install Required Libraries**
 Make sure Python is installed, then run:
 
 pip install -r requirements.txt
+
 
 
 ## 🔹 1. Place MODELS into PROJECT (REQUIRED ✅)
@@ -89,6 +95,7 @@ AI_Music_Data/models/plagiarism_detection/feature_database.pkl
 backend/plagiarism_detection/
 
 
+
 ## 🔹 2. Song Database (REQUIRED ✅)
 
 **Copy:**
@@ -99,6 +106,7 @@ AI_Music_Intelligence/backend/song_database/
 
 **👉 Used for:**
 * Plagiarism Detection
+
   
 
 ## 🔹 3. Backend Uploads (OPTIONAL ⚠️)
@@ -108,6 +116,7 @@ AI_Music_Data/backend_uploads/
 
 **➡️ into:**
 AI_Music_Intelligence/backend/uploads/
+
 
 
 ## 🔹 4. Datasets (OPTIONAL ⚠️)
@@ -121,6 +130,7 @@ These are only needed if you want to retrain models:
 
 **👉 Not required for normal execution**
 
+
 # 🧠 Important Notes
 
 * ✅ Models are pre-trained
@@ -128,10 +138,12 @@ These are only needed if you want to retrain models:
 * ✅ song_database is required for system to work
 * ❌ Do not change folder names
 
+
 # ▶️ Run the Project
 
 cd backend
 python app.py
+
 
 # 🧪 How It Works
 
@@ -158,6 +170,7 @@ backend/models/
 
 **➡️ Check:**
 backend/song_database/
+
 
 ## ❌ App not starting
 
