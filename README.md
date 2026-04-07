@@ -13,26 +13,6 @@ An intelligent AI-based system that analyzes music using multiple features like 
 * 🔍 Plagiarism Detection                    (Detects plagiarism of the song)
 * 🎧 Music Recommendation System             (Recommends music based on emotion)
 
-# 📁 Project Structure (IMPORTANT)
-
-AI_Music_Intelligence/
-│
-├── backend/
-│   ├── app.py
-│   ├── models/
-│   ├── plagiarism_detection/
-│   ├── regional_detection/
-│   ├── routes/
-│   ├── song_database/        ← (REQUIRED)
-│   ├── uploads/
-│   ├── voice_emotion/
-│
-├── emotion_detection/        ← (outside backend)
-├── genre_detection/          ← (outside backend)
-├── lyrics_analysis/          ← (outside backend)
-├── music_recommendation/     ← (outside backend)
-
-
 
 # 📥 Download Required Data
 
